@@ -5,7 +5,7 @@ When I first built the solution, I started with a forced matching approach: for 
 At first, this seemed fine because it guaranteed that every input had an output. But after reviewing the results, I wasn’t really satisfied with it, because forcing a match when the data is uncertain can be rather risky.
 So I changed my approach  and decided to build a second version of the pipeline where I introduced a confidence threshold; instead of forcing the match, it asks a simple question: “Is this match actually good enough to trust?”
 •	If the answer is yes: we keep the match
-•	If the answer is no:we return “No match”.
+•	If the answer is no:we return “No match”. 
 Let me explain my thinking process: in my first version, I built a model that for each company in the dataset, it looked at all possible candidate matches and picked the one that looked the most similar. Basically, even if the match wasn’t the best, the system had to choose something.
 1.	The first model
 
