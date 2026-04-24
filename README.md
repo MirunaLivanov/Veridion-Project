@@ -16,9 +16,11 @@ For each input company, I had a list of potential candidates, respectively for e
 •	whether there is a website/ domain signal available;
 Each of these signals contributed to a final score that measured how likely is it that two records refer to the same real-world company. After scoring all candidates, it selected the one with the highest score. The grouping logic was to group all candidates by input company and after to pick the row with the maximum score.
 So the system to return could never return “no match”, which I thought afterwards that it’s not 100% correct. The biggest limitation is that it does not handle uncertainty; it represents a good start in my opinion, but it does not return the best there could be.
+
 2.	The second model
 
 The final pipeline works as following:for each input company, I compared it with its possible matches using: fuzzy name similarity (to handle spelling differences and variations), country match (strong signal), city match (weaker signal) and last but not least - optional website/ domain signals. Each of these “signals” contribute to a final score between 0 and 1.Afterwards, it picks the candidate with the highest score, but not before checking its quality. If the score is way too low, it labels it, so there is no guessing left.
+
 3.	Conclusion
 
 I kept both of the models because they show two different concepts, two ways of handling data, but especially because I wanted to literally show the flow of the thought process that I had.
